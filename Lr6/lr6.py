@@ -41,7 +41,7 @@ X_test_scaled = scaler.transform(X_test)
 print("Дані успішно підготовлено та розділено на тренувальний і тестовий набори.\n")
 
 # Створення директорії для збереження графіків
-output_dir = 'chart_lab'
+output_dir = 'chart_lab6'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
