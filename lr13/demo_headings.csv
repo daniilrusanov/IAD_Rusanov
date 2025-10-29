@@ -1,0 +1,16 @@
+﻿Номер,Тип,Заголовок,Довжина
+1,h2,Contents,8
+2,h1,Web scraping,12
+3,h2,History,7
+4,h2,Techniques,10
+5,h3,Human copy-and-paste,20
+6,h3,Text pattern matching,21
+7,h3,HTTP programming,16
+8,h3,HTML parsing,12
+9,h3,DOM parsing,11
+10,h3,Vertical aggregation,20
+11,h3,Semantic annotation recognizing,31
+12,h3,Computer vision web-page analysis,33
+13,h3,AI-powered document understanding,33
+14,h2,Legal issues,12
+15,h3,United States,13

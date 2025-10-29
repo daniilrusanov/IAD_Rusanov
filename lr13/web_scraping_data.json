@@ -1,0 +1,84 @@
+{
+  "google_info": {
+    "URL": "https://www.google.com",
+    "Заголовок": "Google",
+    "Мова": "uk",
+    "Кількість посилань": 16,
+    "Кількість зображень": 10,
+    "Кількість скриптів": 12,
+    "Кількість стилів": 2
+  },
+  "meta_tags": [
+    {
+      "name": "N/A",
+      "content": "N/A"
+    },
+    {
+      "name": "referrer",
+      "content": "origin"
+    },
+    {
+      "name": "N/A",
+      "content": "/images/branding/googleg/1x/googleg_standard_color_128dp.png"
+    }
+  ],
+  "links_sample": [
+    {
+      "Текст": "Gmail",
+      "URL": "https://mail.google.com/mail/&ogbl",
+      "Повний URL": "https://mail.google.com/mail/&ogbl"
+    },
+    {
+      "Текст": "Зображення",
+      "URL": "https://www.google.com/imghp?hl=uk&ogbl",
+      "Повний URL": "https://www.google.com/imghp?hl=uk&ogbl"
+    },
+    {
+      "Текст": "[Без тексту]",
+      "URL": "https://www.google.com.ua/intl/uk/about/products",
+      "Повний URL": "https://www.google.com.ua/intl/uk/about/products"
+    },
+    {
+      "Текст": "Увійти",
+      "URL": "https://accounts.google.com/ServiceLogin?hl=uk&passive=true&continue=https://www.google.com/&ec=futu",
+      "Повний URL": "https://accounts.google.com/ServiceLogin?hl=uk&passive=true&continue=https://www.google.com/&ec=futu"
+    },
+    {
+      "Текст": "English",
+      "URL": "https://www.google.com/setprefs?sig=0_fEKwxeyKcd6GKxIbzngsThEFfcM%3D&hl=en&source=homepage&sa=X&ved=",
+      "Повний URL": "https://www.google.com/setprefs?sig=0_fEKwxeyKcd6GKxIbzngsThEFfcM%3D&hl=en&source=homepage&sa=X&ved="
+    }
+  ],
+  "demo_headings": [
+    {
+      "Номер": 1,
+      "Тип": "h2",
+      "Заголовок": "Contents",
+      "Довжина": 8
+    },
+    {
+      "Номер": 2,
+      "Тип": "h1",
+      "Заголовок": "Web scraping",
+      "Довжина": 12
+    },
+    {
+      "Номер": 3,
+      "Тип": "h2",
+      "Заголовок": "History",
+      "Довжина": 7
+    },
+    {
+      "Номер": 4,
+      "Тип": "h2",
+      "Заголовок": "Techniques",
+      "Довжина": 10
+    },
+    {
+      "Номер": 5,
+      "Тип": "h3",
+      "Заголовок": "Human copy-and-paste",
+      "Довжина": 20
+    }
+  ]
+}
