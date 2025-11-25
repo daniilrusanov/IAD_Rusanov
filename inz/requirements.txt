@@ -1,0 +1,14 @@
+flask
+requests
+beautifulsoup4
+pandas
+scikit-learn
+nltk
+pymorphy2
+matplotlib
+seaborn
+wordcloud
+plotly
+curl_cffi
+selenium
+webdriver-manager

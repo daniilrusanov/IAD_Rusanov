@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozetka Sentiment Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Rozetka Sentiment Analysis</h1>
+            <p>Аналіз тональності відгуків на товари</p>
+        </header>
+
+        <section class="search-section">
+            <form method="POST" action="/">
+                <input type="text" name="url" placeholder="Вставте посилання на товар Rozetka..."
+                    value="{{ url if url else '' }}" required>
+                <button type="submit">Аналізувати</button>
+            </form>
+            {% if error %}
+            <div class="error-message">{{ error }}</div>
+            {% endif %}
+        </section>
+
+        {% if results %}
+        <section class="results-section">
+            <h2>Результати аналізу</h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Всього відгуків</h3>
+                    <p>{{ stats.total_reviews }}</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Середня оцінка</h3>
+                    <p>{{ stats.average_rating }} / 5</p>
+                </div>
+                <div class="stat-card positive">
+                    <h3>Позитивні</h3>
+                    <p>{{ stats.positive_count }}</p>
+                </div>
+                <div class="stat-card neutral">
+                    <h3>Нейтральні</h3>
+                    <p>{{ stats.neutral_count }}</p>
+                </div>
+                <div class="stat-card negative">
+                    <h3>Негативні</h3>
+                    <p>{{ stats.negative_count }}</p>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Розподіл тональності</h3>
+                    <img src="data:image/png;base64,{{ plots.pie_chart }}" alt="Pie Chart">
+                </div>
+                <div class="chart-card">
+                    <h3>Розподіл оцінок</h3>
+                    <img src="data:image/png;base64,{{ plots.histogram }}" alt="Histogram">
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Розподіл довжини відгуків</h3>
+                    <img src="data:image/png;base64,{{ plots.review_length }}" alt="Review Length">
+                </div>
+                <div class="chart-card">
+                    <h3>Рекомендація до покупки</h3>
+                    <img src="data:image/png;base64,{{ plots.sentiment_by_stars }}" alt="Purchase Recommendation">
+                </div>
+            </div>
+
+            <div class="keywords-section">
+                <div class="keyword-col">
+                    <h3>Топ слів (Позитивні)</h3>
+                    <ul>
+                        {% for word in pos_keywords %}
+                        <li>{{ word }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="keyword-col">
+                    <h3>Топ слів (Негативні)</h3>
+                    <ul>
+                        {% for word in neg_keywords %}
+                        <li>{{ word }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="wordclouds-section">
+                {% if plots.wordcloud_pos %}
+                <div class="wordcloud-card">
+                    <h3>Хмара слів (Позитив)</h3>
+                    <img src="data:image/png;base64,{{ plots.wordcloud_pos }}" alt="Positive WordCloud">
+                </div>
+                {% endif %}
+                {% if plots.wordcloud_neg %}
+                <div class="wordcloud-card">
+                    <h3>Хмара слів (Негатив)</h3>
+                    <img src="data:image/png;base64,{{ plots.wordcloud_neg }}" alt="Negative WordCloud">
+                </div>
+                {% endif %}
+            </div>
+
+        </section>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>
